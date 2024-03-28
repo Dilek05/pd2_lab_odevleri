@@ -1,178 +1,187 @@
 //
-//  
+//  main.c
+//  pd2_lab2
+//
+//  Created by Dilek ÜNLÜ on 22.02.2024.
 //
 
+  
+#include <stdio.h>
 
 
-/*#include <stdio.h>
-
-int x=5;
-
-int main(void){
+/*void hesapla(int ogr_sayisi, int gecme_not)
+{
+    int not[100], i;
+    int kalan_ogr_sayisi=0;
+    float ortalama=0;
+    
+    for(i=0; i < ogr_sayisi; i++) // dizilerin indeksleri 0 dan başlar unutmaa
     {
-        int x=10, y=20;
+        printf("%d.öğrencinin notunu giriniz:",i+1);
+        scanf("%d", &not[i]);
+    }
+    
+    for (i=0; i< ogr_sayisi; i++)
+    {
+        ortalama= ortalama + not[i];
+        
+        if (not[i] < gecme_not)
         {
-            printf("x= %d, y= %d\n", x, y);
-            
-            {
-                int y=40;
-                
-                x++;
-                y++;
-                
-                printf("x= %d, y= %d\n", x,y);
-            }
-            
-            printf("x= %d, y= %d\n", x,y);
+            kalan_ogr_sayisi++;
         }
     }
+    ortalama = ortalama / ogr_sayisi;
+    printf("\n");
     
-    printf("x= %d\n", x);
+    printf("sınıfın ortalaması: %.2f\n", ortalama);
+    printf("kalan öğrenci sayısı: %d\n",kalan_ogr_sayisi);
     
-    return 0;
-}*/
-
-
-
-
-
-
-
-
-
-//deneme1.c
-/*#include <stdio.h>
-
-void fonk(void);
-
-int gid =287;  //global int değişkeni tanımlaması
-
-int main(void)
-{
-    printf("deneme1.c gid değişken değeri: %d\n", gid);
-    
-    fonk(); // deneme2.c dosyasındaki fonk() fonksiyonuna çağrı
-    
-    return 0;
-}
-
-//deneme2.c
-extern int gid; //global int değişken bildirimi
-
-void fonk (void)
-{
-    printf("deneme2.c gid değişken değeri: %d\n",gid);
-}*/
-
-
-
-
-
-
-
-
-
-
-/*#include <stdio.h>
-#include <time.h>
-
-int main(void)
-{
-    clock_t start_t, end_t;
-    register int id1, id2;
-    
-    start_t = clock();
-    
-    for (id1=0 ; id1<2000000 ; id1++) {
-        for (id2=0 ; id2<100 ; id2++) { }
-    }
-    
-    end_t = clock();
-    
-    printf("start_t değeri: %lu\n", start_t);
-    printf("end_t değeri: %lu\n", end_t);
-    printf("döngü çalışma süresi(saniye) : %.3f\n", (double)(end_t - start_t) / CLOCKS_PER_SEC );
-    
-    return 0;
-    
-}*/
-
-
-
-
-
-
-
-
-/*#include <stdio.h>
-
-void fonk(void);
-void fonk_sta(void);
-
-int main(void)
-{
-    fonk();
-    fonk_sta();
-    
-    printf("\n ");
-    
-    fonk();
-    fonk_sta();
-    
-    return 0;
-}
-
-void fonk(void)
-{
-    int id =1 ;
-    
-    printf("fonk() id değişken değeri: %d\n", id);
-    
-    id = id + 21;
-    
-    printf("fonk() id değişken değeri: %d\n", id);
-}
-
-void fonk_sta(void)
-{
-    static int id=1; // sadece fonksiyonun ilk çağrısında çalışır.
-    
-    printf("fonk_sta() id değişken değeri: %d\n", id);
-    
-    id = id +21;
-    
-    printf("fonk_sta() id değişken değeri: %d\n", id);
-}*/
-
-
-
-
-
-
-
-
-
-/*#include <stdio.h>
-#define pi 3.14
-
-float yarıcap(float r ){
-    float alan;
-    
-    alan= pi * r * r;
- 
-    return alan;
 }
 
 int main(void){
-    float r;
+    int ogr_sayisi ;
+    int gecme_not ;
     
-    printf("yarıçapı giriniz: ");
-    scanf("%f",&r);
+    printf("öğrenci sayısını giriniz (en fazla 100): ");
+    scanf("%d", &ogr_sayisi);
     
-    printf("dairenin alanı : %.2f\n ",yarıcap(r));
+    printf("geçme notunu giriniz: ");
+    scanf("%d", &gecme_not);
+    
+    hesapla(ogr_sayisi,gecme_not);
     
     return 0;
 }*/
+
+
+
+
+
+
+
+
+
+/*#include <stdio.h>
+
+void kitleindeks(void){
+    float boy,kilo;
+    float indeks=0;
+    
+    printf("boyunuzu giriniz (metre cinsinden) : ");
+    scanf("%f", &boy);
+    
+    printf("kilonuzu giriniz: ");
+    scanf("%f", &kilo);
+    
+    indeks = kilo / (boy * boy);
+    
+    if (0 <=indeks && indeks <19)
+        printf("durumu: ZAYIF\n");
+    else if (19 <=indeks && indeks <26)
+        printf("durumu: NORMAL\n");
+    else if (26 <=indeks && indeks <31)
+        printf("durumu: ! KİLOLU !\n");
+    else
+        printf("durumu: !! OBEZ !!\n");
+}
+
+int main(void)
+{
+    kitleindeks();
+    
+    return 0;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
